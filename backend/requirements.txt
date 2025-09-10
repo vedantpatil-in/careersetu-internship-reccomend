@@ -1,0 +1,6 @@
+Flask
+pandas
+numpy
+scikit-learn
+sklearn2pmml
+lightgbm

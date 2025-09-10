@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Recommender</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Internship Recommender</h1>
+        <button id="lang-toggle">हिंदी</button>
+        <form id="input-form">
+            <label for="qualification" id="qual-label">Qualification:</label>
+            <select id="qualification" required aria-labelledby="qual-label">
+                <option value="12th">12th</option>
+                <option value="ITI">ITI</option>
+                <option value="Diploma">Diploma</option>
+                <option value="BA">BA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MBA">MBA</option>
+            </select>
+
+            <label for="branch" id="branch-label">Branch:</label>
+            <select id="branch" required>
+                <option value="Mech">Mechanical</option>
+                <option value="Elec">Electrical</option>
+                <option value="Civil">Civil</option>
+                <option value="CS">Computer Science</option>
+                <option value="Comm">Commerce</option>
+                <option value="Arts">Arts</option>
+            </select>
+
+            <label for="pincode" id="pin-label">Pincode:</label>
+            <input type="number" id="pincode" required>
+
+            <label for="emoji" id="emoji-label">Interest Emoji:</label>
+            <input type="text" id="emoji" placeholder="e.g. people, computer" required>
+            <button type="button" id="voice-btn">🎤</button>
+
+            <button type="submit" id="submit-btn">Get Recommendations</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

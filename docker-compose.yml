@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./vacancies.csv:/app/vacancies.csv
+      - ./pincode_latlon.csv:/app/pincode_latlon.csv
+      - ./internship_recommender.pmml:/app/internship_recommender.pmml
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
